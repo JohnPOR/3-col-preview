@@ -9,10 +9,10 @@ body {
 }
 
 .container  {
-    width: 375px;
     margin: 2em auto;
     display: flex;
     flex-direction: column;
+    min-width: 375px;
 }
 
 .sedans {
@@ -100,9 +100,38 @@ button {
 }
 
  .attribution { 
-     font-size: 11px; text-align: center; 
+     font-size: 11px; 
+     text-align: center; 
     }
 
  .attribution a { 
      color: hsl(228, 45%, 44%); 
     }
+
+
+@media (min-width: 500px){
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10em;
+    }
+
+    .sedans {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        background-color: hsl(179, 100%, 13%);
+        border-radius: 0 10px 10px 0;
+    }
+
+    .car-item {
+        max-width: 18em;
+    }
+
+    .car-item p {
+        margin-bottom: 5em;
+    }
+
+
+}
